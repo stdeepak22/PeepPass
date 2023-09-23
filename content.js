@@ -5,8 +5,7 @@ function showPass(ele)
         ele.orgType = "password";
         ele.type = "text";
         timeout = setTimeout(() => {
-            ele.type = "password";
-            ele.orgType = undefined;
+            hideNow(ele);
         }, 2000);
     }
 }
@@ -16,7 +15,7 @@ function hideNow(ele)
     if (ele.tagName.toLowerCase() === 'input' && (ele.type.toLowerCase() === 'password' || ele.orgType === 'password') ) {                
         ele.type = "password";
         ele.orgType = undefined;
-        clearTimeout(timeout);
+        timeout && clearTimeout(timeout);
     }
 }
 
