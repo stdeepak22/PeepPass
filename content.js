@@ -1,7 +1,6 @@
 let timeout;
-function showPass(ele)
-{
-    if (ele.tagName.toLowerCase() === 'input' && ele.type.toLowerCase() === 'password') {        
+function showPass(ele) {
+    if (ele.tagName.toLowerCase() === 'input' && ele.type.toLowerCase() === 'password') {
         ele.orgType = "password";
         ele.type = "text";
         timeout = setTimeout(() => {
@@ -10,9 +9,8 @@ function showPass(ele)
     }
 }
 
-function hideNow(ele)
-{
-    if (ele.tagName.toLowerCase() === 'input' && (ele.type.toLowerCase() === 'password' || ele.orgType === 'password') ) {                
+function hideNow(ele) {
+    if (ele.tagName.toLowerCase() === 'input' && (ele.type.toLowerCase() === 'password' || ele.orgType === 'password')) {
         ele.type = "password";
         ele.orgType = undefined;
         timeout && clearTimeout(timeout);

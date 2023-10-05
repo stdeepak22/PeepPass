@@ -1,17 +1,26 @@
 {
-    "manifest_version": 2,
-    "name": "PeepPass",
-    "description": "extension to show the password value as text.",
-    "version": "1.0",   
-    "content_scripts": [{
-        "matches": ["http://*/*", "https://*/*"],
-        "js": ["content.js"]
-      }],
-    "browser_action": {
-        "default_icon": "icon.png"        
-       },
-    "background":{        
-        "scripts":[]
-    },
-    "permissions": ["contextMenus"]
-  }
+  "manifest_version": 2,
+  "name": "PeepPass",
+  "description": "extension to show the password in password field.",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": []
+  },
+  "permissions": [
+    "contextMenus"
+  ]
+}
